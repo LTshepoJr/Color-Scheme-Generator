@@ -11,6 +11,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
 
 main {
