@@ -1,4 +1,20 @@
-html, body {
-    margin: 0;
-    padding: 0;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1c1c1c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+main {
+  background-color: #fffdfe;
+  width: 34.375rem;
+  height: 34.375rem;
 }
