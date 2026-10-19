@@ -3,6 +3,11 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hex: #00aba0;
 }
 
 body {
@@ -19,4 +24,14 @@ main {
   background-color: #fffdfe;
   width: 34.375rem;
   height: 34.375rem;
+}
+
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 100%;
+}
+
+.rectangle {
+  height: 100%;
 }
