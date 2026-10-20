@@ -15,7 +15,13 @@
   <body>
     <main>
       <section class="header">
-        <input type="color" id="color-picker" value="#F55A5A" />
+        <input
+          type="color"
+          id="color-picker"
+          value="#F55A5A"
+          spellcheck="false"
+          maxlength="7"
+        />
         <select name="color_scheme-mode" id="color_scheme-mode">
           <option value="monochrome">Monochrome</option>
           <option value="monochrome-dark">Monochrome-Dark</option>
@@ -35,7 +41,7 @@
         <div class="rectangle color4"></div>
         <div class="rectangle color5"></div>
       </section>
-      <section class="footer">
+      <section class="footer" id="hex_footer-values">
         <p>#f55a5a</p>
         <p>#2b283a</p>
         <p>#fbf3ab</p>
