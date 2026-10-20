@@ -7,7 +7,8 @@
 }
 
 :root {
-  --hex: #00aba0;
+  --hex-text: #2b283a;
+  --grey: #d1d5db;
 }
 
 body {
@@ -24,8 +25,20 @@ main {
   background-color: #fffdfe;
   width: 34.375rem;
   height: 34.375rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
+.header {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+  /* box-shadow: 0 5px 11px -5px #00000026; */
+}
+
+/* Main Color Display */
 .color-palette {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -34,4 +47,127 @@ main {
 
 .rectangle {
   height: 100%;
+}
+
+.color1 {
+  background-color: #f55a5a;
+}
+.color2 {
+  background-color: #2b283a;
+}
+.color3 {
+  background-color: #fbf3ab;
+}
+.color4 {
+  background-color: #aad1b6;
+}
+.color5 {
+  background-color: #a626d3;
+}
+
+/* Color Picker Input */
+#color-picker {
+  block-size: 3.8125em;
+  inline-size: 4.8125em;
+  border-width: 0.1em;
+  border-color: var(--grey);
+  padding: 0 0.2em;
+  background-color: #e5e5e5;
+}
+/* Get Color Scheme Button */
+#get_color-scheme {
+  border-radius: 6px;
+  border: solid 1px var(--grey);
+  background-color: inherit;
+  padding: 0 0.7em;
+  color: #374151;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#get_color-scheme:hover {
+  background-color: var(--grey);
+}
+
+#get_color-scheme:active {
+  background-color: #b4babe;
+}
+
+/* Color Scheme Mode */
+#color_scheme-mode {
+  cursor: pointer;
+  padding: 0 0.5em;
+  border-radius: 6px;
+  width: 10em;
+  border: solid 1px var(--grey);
+  color: #111827;
+  display: flex;
+  align-items: center;
+}
+
+#color_scheme-mode,
+::picker(select) {
+  appearance: base-select;
+}
+
+::picker(select) {
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  padding: 0.2em;
+}
+
+#color_scheme-mode option {
+  padding: 0.7em 0.8em;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#color_scheme-mode option:hover {
+  background-color: var(--grey);
+}
+
+#color_scheme-mode option:checked {
+  font-weight: bold;
+}
+
+#color_scheme-mode option::checkmark {
+  content: "✓";
+  order: 1;
+  margin-left: auto;
+  color: #4f46e5;
+  font-weight: bold;
+}
+
+#color_scheme-mode::picker-icon {
+  content: "▾";
+  color: #6b7280;
+  font-size: 1.7em;
+  transition: rotate 0.2s ease;
+}
+
+#color_scheme-mode:open::picker-icon {
+  rotate: 180deg;
+}
+
+#color-picker {
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em 0;
+  color: var(--hex-text);
+  font-weight: 500;
+  font-size: 0.9em;
+}
+
+.footer p {
+  cursor: pointer;
+}
+
+.footer p:hover {
+  text-decoration: underline;
 }
