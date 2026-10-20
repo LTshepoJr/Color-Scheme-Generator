@@ -9,6 +9,8 @@
 :root {
   --hex-text: #2b283a;
   --grey: #d1d5db;
+  --dark-mode: #1f2937;
+  --light-mode: #fffdfe;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 }
 
 main {
-  background-color: #fffdfe;
+  background-color: var(--light-mode);
   width: 34.375rem;
   height: 34.375rem;
   overflow: hidden;
@@ -63,6 +65,18 @@ main {
 }
 .color5 {
   background-color: #a626d3;
+}
+
+.copy-text {
+  transition: color 0.2s ease;
+}
+
+.copy-text:hover {
+  color: #00aba0;
+}
+
+.copy-text.copied {
+  color: #16a34a;
 }
 
 /* Color Picker Input */
