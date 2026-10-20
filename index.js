@@ -10,10 +10,8 @@ getColorSchemeBtn.addEventListener("click", () => {
   )
     .then((prom) => prom.json())
     .then((data) => {
-      console.log(data);
       const hexFooterHtml = data.colors
         .map(({ hex }) => {
-          console.log(hex.value);
           return `<p>${hex.value}</p>`;
         })
         .join("");
@@ -21,7 +19,10 @@ getColorSchemeBtn.addEventListener("click", () => {
 
       const bgColorHtml = data.colors
         .map(({ hex }) => {
-          return ` <div class="rectangle" style="background-color: ${hex.value}"></div> `;
+          return `<div
+            class="rectangle"
+            style="background-color: ${hex.value}"
+          ></div>`;
         })
         .join("");
       colorPalette.innerHTML = bgColorHtml;
